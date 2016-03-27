@@ -1,0 +1,54 @@
+<! >
+<html lang = "en">
+<head>
+	<meta charset ="utf-8" />
+	<title>Pi Calculator</title>
+	<link rel="stylesheet" type="text/css" href="pi.css">
+</head>
+
+<body>
+	<form action = "" method = "post">
+		<div>
+			<p title = "Input a higher number if you want a more accurate value of pi"> Please input a number </p>
+
+			<div id = "mcen">
+				<input type = "number" name = "iterations" id="iterations" />
+				<button onClick="CalcPi(iterations)">Click me!</button>
+			</div>
+		</div>
+	</form>
+
+
+	<script type="text/javascript" defer>
+		 function CalcPi(iterations) {
+			
+	
+
+			//var counter = 0;	 // Is defining the counter her instead of the for loop where it is used a good programming practice?
+			var dom = -1;       // To find values of pi
+			var num = 1;       // To find values of pi
+			var PI_series = 4.0;    // The series of values that is multiplied together in for loop to get value of pi
+			var totalPI = 0.0;    // Get final value of PI after all the iterations. It's the accumulator in the for loop.
+			for (var counter = 0;counter < iterations.value; counter++) 
+			{
+				dom += 2;                      // Calculating the dominator to find the fractions to subtract to pi
+						if (counter % 2 == 1)  // if/else statements are used to find the sign of the fractions to subtract to pi
+						{
+							num = -1;
+						}
+						else 
+						{
+							num = 1;
+						}
+						
+				PI_series = (4.0 * num) / dom;  // Get fractions to subtract to pi. Get 4/1, -4/3, 4/5 etc.
+						totalPI += PI_series;   // Getting the calculated value of pi
+				
+			}
+
+			alert("Here is the calculated version of PI: " + totalPI)
+		};
+	</script>
+
+</body>		
+</html>

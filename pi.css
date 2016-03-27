@@ -1,0 +1,47 @@
+body {
+	background-color: #707D79
+}
+
+h1 {
+	font-family: "San-serif", Georgia, Serif;
+	text-align: center;
+	color: white;
+}
+
+p {
+	
+	font-family: "Calibri", Georgia, Serif;
+	text-align: indent;
+	color: white;
+	text-align: center;
+}
+
+p:hover {
+	font-family: "Calibri", Georgia, Serif;
+	font-size: 125%;
+	text-align: indent;
+	color: white;
+	text-align: center;
+}
+
+div {
+	
+	border: 2px solid white;
+    background-color: #B174FF;
+	padding-top: 50px;
+    padding-right: 25%;
+    padding-bottom: 50px;
+    padding-left: 25%;
+	margin: auto;
+	padding: auto;
+	border-radius: 25px;
+
+}
+
+div#mcen {
+	align: center;
+}
+
+input {
+	text-align: center;
+}
